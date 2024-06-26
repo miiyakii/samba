@@ -1,0 +1,13 @@
+services:
+  samba:
+    tty: true
+    image: miiyakii/samba
+    ports:
+      - 445:445
+      - 139:139
+    volumes:
+      - ~/:/storage
+    # environment:
+    #   - USER=username::uid:gid:home:/usr/sbin/nologin
+    #   - SMBPASS=password
+    # restart: unless-stopped
